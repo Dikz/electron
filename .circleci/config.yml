@@ -272,12 +272,6 @@ jobs:
               Bump* ) echo 'export ELECTRON_RELEASE=1' >> $BASH_ENV
             esac
       - run:
-          name: Update brew so node install works
-          command: brew update
-      - run:
-          name: Install Node.js
-          command: brew install node
-      - run:
          name: Bootstrap
          command: |
            if [ "$ELECTRON_RELEASE" == "1" ]; then
@@ -360,12 +354,6 @@ jobs:
             case ${MESSAGE} in
               Bump* ) echo 'export ELECTRON_RELEASE=1' >> $BASH_ENV
             esac
-      - run:
-          name: Update brew so node install works
-          command: brew update
-      - run:
-          name: Install Node.js
-          command: brew install node
       - run:
          name: Bootstrap
          command: |
